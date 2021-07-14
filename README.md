@@ -1,23 +1,18 @@
-
-
-
 ![jquery-tabstops](_tmp/logo-jquery-tabstops.png)
-
-**jquery-tabstops** is a jquery plugin to provide Office-style tabstops, with various alignments and leaders
-
 
 ## Overview
 
-jquery-tabstops does yada yada yada
+**jquery-tabstops** is a jquery plugin to provide Office-style tabstops, with various alignments and leaders
 
 Screenshot:
 
 ![jquery-tabstops](_tmp/jquery-tabstops.png)
 
+Blog post:
+
+[link to that]
 
 ## Quick start
-
-
 
 Use [CDNjs](https://cdnjs.com/libraries/jquery-tabstops) or [JSdelivr](https://www.jsdelivr.com/package/npm/jquery-tabstops) to get latest version of JQuery and the plugin.
 ```html
@@ -28,28 +23,11 @@ Use [CDNjs](https://cdnjs.com/libraries/jquery-tabstops) or [JSdelivr](https://w
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-tabstops/0.0.1/js/jquery-tabstops.min.js"></script>   
 ``` 
 
+## Install with NPM / Bower / Yarn
 
-## Install with NPM
-
-Use [NPM](https://www.npmjs.com/package/jquery-tabstops) to download latest version of a plugin and install it directly in to your project. 
-
-* npm install jquery-tabstops
-
-
-
-## Install with Bower
-
-Use [Bower](https://bower.io/) to download latest version of a plugin and install it directly in to your project. 
-
-* bower install jquery-tabstops
-
-
-
-## Install with Yarn
-
-Use [Yarn](https://yarnpkg.com/en/package/jquery-tabstops) to download latest version of a plugin and install it directly in to your project. 
-
-* yarn add jquery-tabstops
+* [NPM](https://www.npmjs.com/package/jquery-tabstops) : npm install jquery-tabstops
+* [Bower](https://bower.io/) : bower install jquery-tabstops
+* [Yarn](https://yarnpkg.com/en/package/jquery-tabstops) : yarn add jquery-tabstops
 
 ## Demos
 
