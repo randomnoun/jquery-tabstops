@@ -84,7 +84,10 @@ All measurements can be expressed in CSS units ( e.g. 1cm, 10px, 1in, 1em, 10%, 
 
 ## Creating tabstops
 
-Either by creating a CSS class
+Tabstops can be created via CSS classes, inline styles, data sttributes or javascript.
+
+
+CSS classes:
 ```html
 <style>
 .myTabStyle {
@@ -96,21 +99,24 @@ Either by creating a CSS class
     $("p").tabstops();
 </script>
 ```
-Or by inlining the CSS
+
+Inline CSS:
 ```html
 <p style="--tabstops: 1cm left, 5cm right dotted, 10cm center">Here be the tabstops</p>
 <script>
     $("p").tabstops();
 </script>
 ```
-Or by using data attributes
+
+Data attributes:
 ```html
 <p data-tabstops="1cm left, 5cm right dotted, 10cm center">Here be the tabstops</p>
 <script>
     $("p").tabstops();
 </script>
 ```
-Or by using javascript
+
+Javascript:
 ```html
 <p data-tabstops="1cm left, 5cm right dotted, 10cm center">Here be the tabstops</p>
 <script>
@@ -119,7 +125,10 @@ Or by using javascript
     });
 </script>
 ```
-When initialising by javascript, tabstops can be supplied using a comma-separated list of tabstops (as above), or by an array of individual tabstops. Individual tabstops can be represented either as strings:
+
+When initialising by javascript, tabstops can be supplied using a comma-separated list of tabstops (as above), or by an array of individual tabstops. 
+
+Individual tabstops can be represented either as strings:
 ```html
 <p data-tabstops="1cm left, 5cm right dotted, 10cm center">Here be the tabstops</p>
 <script>
@@ -131,8 +140,8 @@ When initialising by javascript, tabstops can be supplied using a comma-separate
         ]
     });
 </script>
-
 ```
+
 or objects:
 ```html
 <p data-tabstops="1cm left, 5cm right dotted, 10cm center">Here be the tabstops</p>
@@ -147,7 +156,7 @@ or objects:
 </script>
 ```
 ## Events
-Tabstops generate no events
+Tabstops do not generate events
 
 ## Methods
 
