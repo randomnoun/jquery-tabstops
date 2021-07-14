@@ -1,17 +1,18 @@
 
 
-![jacobi-tabstops](_tmp/logo-jacobi-tabstops.png)
 
-**jacobi-tabstops** is a jquery plugin to provide Office-style tabstops, with various alignments and leaders
+![jquery-tabstops](_tmp/logo-jquery-tabstops.png)
+
+**jquery-tabstops** is a jquery plugin to provide Office-style tabstops, with various alignments and leaders
 
 
 ## Overview
 
-jacobi-tabstops does yada yada yada
+jquery-tabstops does yada yada yada
 
 Screenshot:
 
-![jacobi-tabstops](_tmp/jacobi-tabstops.png)
+![jquery-tabstops](_tmp/jquery-tabstops.png)
 
 
 ## Quick start
@@ -173,13 +174,33 @@ Tabstops generate no events
 ## Methods
 
 ```javascript
-// refresh tabstops 
-// (e.g. after container resize has triggered wordwrap)
+// initialise tabstops 
+// is equivalent to .tabstops('refresh')
+$('p').tabstops();
+
+// refresh tabstops
+// e.g. after container resize has triggered wordwrap
 $('p').tabstops('refresh');
 
-// retrieve options
+// set multiple options and refresh
+$('p').tabstops('refresh', { 
+  'defaultTabstop' : '2cm',
+  'leaderMode' : 'border'
+});
+
+// set options via data attributes
+$('p').attr('data-default-tabstop', '2cm');
+$('p').tabstops('refresh', 'data');
+
+// OPTIONS
+
+// retrieve all options
 var options = $('#myParagraph').tabstops('option');
 console.log(options);
+
+// retrieve individual option
+var defaultTabstop = $('#myParagraph').tabstops('option', 'defaultTabstop');
+console.log(defaultTabstop);
 
 // change individual options and refresh
 $('p').tabstops('option', 'defaultTabstop', '2cm');
