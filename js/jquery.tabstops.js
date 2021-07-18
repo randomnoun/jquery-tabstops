@@ -31,7 +31,11 @@
 
     $.fn.extend({
         tabstops: function(verb, p1, p2) {
-            verb = (typeof verb == 'undefined') ? 'refresh' : verb;
+            if (typeof verb == 'undefined') {
+                verb = 'refresh';
+            } else if (typeof verb == 'object') { 
+                p1 = verb; verb = 'refresh';
+            }
             this.each(function() {
                 new $.Tabstops(this, verb, p1, p2);
             });
@@ -44,10 +48,10 @@
         var $el = $(el);
     
         if (verb=='refresh') {
-            init($el, p1);
+            refresh($el, p1);
             
         } else if (verb=='option') {
-            option(verb, p1, p2);
+            option($el, p1, p2);
 
         } else if (verb=='destroy') {
             var data = $el.data('tabstops');
@@ -74,7 +78,7 @@
     }    
 
 
-    function init($el, _options) {
+    function refresh($el, _options) {
         var cssToPixel = function(target, value) {
             // @TODO if value is already px just return that
             var temp = document.createElement("div");  // create temporary element
@@ -89,14 +93,24 @@
         
         // options are:
         // . base defaults
+        // . overridden by data attributes        
         // . overridden by previously-defined options    
-        // . overriden by new options
+        // . overriden by new javascript options
 
-		// @TODO class -> style -> data -> js
-
-        var options = $.extend( {}, $.Tabstops.defaults['refresh'], $el.data('tabstops'), _options);
-
+        // @TODO class -> style -> data -> js
         var p = $el[0];
+        var dataAttributes = {};
+        for (var a of [ 'tabstops', 'default-tabstop', 'tab-element', 'tab-class', 'convert-tabs', 'leader-mode' ]) {
+            var v = p.getAttribute('data-' + a);
+            if (v!=null) {
+                var camelA = a.replace(/-([a-z])/g, function(m) { return m[1].toUpperCase(); });
+                dataAttributes[camelA] = v;
+            }
+        }
+        if (_options == 'data') { _options = dataAttributes; }
+
+        var options = $.extend( {}, $.Tabstops.defaults['refresh'], dataAttributes, $el.data('tabstops'), _options);
+        
         var tabstopsCssProperty = options.tabstopsCssProperty;
         var defaultTabstop = options.defaultTabstop;
         var refreshOnResize = options.refreshOnResize;
@@ -122,7 +136,8 @@
         for (var i=0; i<tabstopsRaw.length; i++) {
             var raw = tabstopsRaw[i];
             if (typeof raw == 'string') {
-                var pal = raw.trim().split(/\s+/); // position, align, leader
+                // var pal = raw.trim().split(/\s+/); // position, align, leader
+                var pal = raw.trim().match(/[^\s"']+|"([^"]*)"|'([^']*)'/g); // split on whitespace, apart from whitespace in quotes
                 var pos = pal[0];
                 var posPx = cssToPixel(p, pos);    
                 var ts = { position : pos , pos : posPx, align : 'left' };
@@ -138,7 +153,9 @@
                 tabstops.push(ts);
             } else if (typeof raw == 'object') {
                 // convert positions to pixels
-                tabstops.push($.extend({}, raw, { pos : cssToPixel(p, raw.position} );
+                tabstops.push(
+                   $.extend( {}, raw, { pos : cssToPixel(p, raw.position) } ) 
+                );
             } else {
                 throw 'Unexpected options.tabstops element; expected string or array';
             }
@@ -148,7 +165,6 @@
         var data = {
             tabstops : tabstops,
             defaultTabstop : defaultTabstop,
-            // tabSelector : options.tabSelector,
             tabElement : options.tabElement,
             tabClass : options.tabClass,
             convertTabs : options.convertTabs,
@@ -157,11 +173,11 @@
             
         };
         $el.data('tabstops', data); // necessary ?
-        refresh($el, data);
+        _refresh($el, data);
         
         if (refreshOnResize) {
             $el.on('resize', function(e) {
-                refresh($el, data);
+                _refresh($el, data);
             });
         }
     }
@@ -184,6 +200,7 @@
         spanTabs.css('minWidth', ''); 
         spanTabs.css('margin', ''); 
         spanTabs.css('borderBottom', ''); 
+        spanTabs.css('textAlign', ''); 
         spanTabs.empty();
         
         if (destroyTabElements) {
@@ -281,11 +298,12 @@
         }
     }
     
-    function refresh($el, data) {
+    // the 'real' refresh method, after options have been parsed and converted into px
+    
+    function _refresh($el, data) {
         var p = $el[0];
         var tabstops = data.tabstops;
         var defaultTabstop = data.defaultTabstop;
-        // var tabSelector = data.tabSelector;
         var tabElement = data.tabElement;
         var tabClass = data.tabClass;
         var convertTabs = data.convertTabs;
@@ -493,14 +511,16 @@
                       (leader == 'dashed' ? '-' :
                       (leader == 'solid' ? '_' : 
                       (leader == 'blank' ?  '\u00a0' :  // &nbsp; // @TODO check OOXML
-                      '\u00a0'))));
+                      (leader && leader.startsWith('"') && leader.endsWith('"') ? leader.substring(1, leader.length - 1).replaceAll(' ', '\u00a0') :  // &nbsp; // @TODO check OOXML
+                      '\u00a0')))));
+                    if (ch.length > 1) { $(spanTab).css('textAlign', 'right'); }
                     var textNode = document.createTextNode(ch);
                     var c = 1;
                     spanTab.appendChild(textNode);
                     while ($(spanTab).width() <= spanTabWidth && c < 1000) { // just in case
                         textNode.nodeValue += ch; c += 1;
                     }
-                    textNode.nodeValue = textNode.nodeValue.substring(0, c - 1);
+                    textNode.nodeValue = textNode.nodeValue.substring(0, c * ch.length - 1);
                 }
             }
         }); // spanTabs.each()
