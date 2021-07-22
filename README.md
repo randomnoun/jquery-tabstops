@@ -1,4 +1,3 @@
-![jquery-tabstops](_tmp/logo-jquery-tabstops.png)
 
 ## Overview
 
@@ -6,7 +5,7 @@
 
 Screenshot:
 
-![jquery-tabstops](_tmp/jquery-tabstops.png)
+![jquery-tabstops](readme/stocks.png)
 
 Blog post:
 
@@ -29,12 +28,38 @@ Use [CDNjs](https://cdnjs.com/libraries/jquery-tabstops) or [JSdelivr](https://w
 * [Bower](https://bower.io/) : bower install jquery-tabstops
 * [Yarn](https://yarnpkg.com/en/package/jquery-tabstops) : yarn add jquery-tabstops
 
-## Demos
+## Sample screenshots
 
-* <a href="http://thegithubsite/jquery-tabstops/demo.html" class="switch__item">Basic demo</a>
-* <a href="http://thegithubsite/jquery-tabstops/demo_advanced.html" class="switch__item">Advanced demo</a>
-* <a href="http://thegithubsite/jquery-tabstops/demo_interactions.html" class="switch__item">Interactions demo</a>
+####  Table of contents
+Example of  right-alignment, leaders
+![Table of contents](readme/toc.png)
 
+
+#### Interesting mandelbrot co-ordinates
+Example of different alignment options: decimal, center, left
+( co-ordinates courtesy of [marksmath](https://www.marksmath.org/classes/DiscourseArchive/FractalLACFall2016/t/post-a-groovy-image-of-the-mandelbrot-set/73/) )
+![Interesting mandelbrot co-ordinates](readme/mandelbrot.png)
+
+#### Stock list
+Example of different leader options: blank, dotted, solid; different alignment options: left, decimal, right, center
+![Stock list](readme/stocks.png)
+
+#### Badly formatted legal document
+Example of bar alignment, custom leader filler text
+![Legal](readme/legal.png)
+
+## Sample code
+
+Some jsfiddle examples of different use cases:
+
+* [Default tab stops](https://jsfiddle.net/knoxg/Lzxpkfea/)
+* [Alignments (left, center, right, decimal, bar)](https://jsfiddle.net/knoxg/Lzxpkfea/)
+* [Leaders (blank, solid, dotted, dashed)](https://jsfiddle.net/knoxg/Lzxpkfea/)
+* [Leader modes (text, border)](https://jsfiddle.net/knoxg/Lzxpkfea/)
+* [Configure via CSS classes](https://jsfiddle.net/knoxg/Lzxpkfea/) (recommended)
+* [Configure via CSS element styles](https://jsfiddle.net/knoxg/Lzxpkfea/)
+* [Configure via javascript](https://jsfiddle.net/knoxg/Lzxpkfea/)
+* [Changing options via javascript](https://jsfiddle.net/knoxg/Lzxpkfea/)
 
 ## Initialisation
 
@@ -47,20 +72,6 @@ To initialise the plugin, call tabstops() on the element:
 ```javascript
 $("p").tabstops();
 ```
-
-
-## Examples
-
-Here you can find bunch of advanced jsfiddle demos with different use cases:
-
-* [Default tab stops](https://jsfiddle.net/knoxg/Lzxpkfea/)
-* [Alignments (left, center, right, decimal, bar)](https://jsfiddle.net/knoxg/Lzxpkfea/)
-* [Leaders (blank, solid, dotted, dashed)](https://jsfiddle.net/knoxg/Lzxpkfea/)
-* [Leader modes (text, border)](https://jsfiddle.net/knoxg/Lzxpkfea/)
-* [Configure via CSS classes](https://jsfiddle.net/knoxg/Lzxpkfea/) (recommended)
-* [Configure via CSS element styles](https://jsfiddle.net/knoxg/Lzxpkfea/)
-* [Configure via javascript](https://jsfiddle.net/knoxg/Lzxpkfea/)
-* [Changing options via javascript](https://jsfiddle.net/knoxg/Lzxpkfea/)
 
 
 ## Settings
@@ -175,9 +186,14 @@ $('p').tabstops('refresh', {
   'leaderMode' : 'border'
 });
 
-// set options via data attributes
+// reset options after data attribute modification
 $('p').attr('data-default-tabstop', '2cm');
 $('p').tabstops('refresh', 'data');
+
+// reset tabstops from CSS after CSS style / class modifications
+$('p').attr('class', 'myDifferentTabstopStyle');
+$('p').tabstops('refresh', { tabstops : null } );
+
 
 // OPTIONS
 
