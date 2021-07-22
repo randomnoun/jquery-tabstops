@@ -31,21 +31,21 @@ Use [CDNjs](https://cdnjs.com/libraries/jquery-tabstops) or [JSdelivr](https://w
 ## Sample screenshots
 
 ####  Table of contents
-Example of  right-alignment, leaders
+Example of right-alignment, leaders  
 ![Table of contents](readme/toc.png)
 
 
 #### Interesting mandelbrot co-ordinates
-Example of different alignment options: decimal, center, left  
+Example of different alignment options (decimal, center, left)  
 ( co-ordinates courtesy of [marksmath](https://www.marksmath.org/classes/DiscourseArchive/FractalLACFall2016/t/post-a-groovy-image-of-the-mandelbrot-set/73/) )  
 ![Interesting mandelbrot co-ordinates](readme/mandelbrot.png)
 
 #### Stock list
-Example of different leader options: blank, dotted, solid; different alignment options: left, decimal, right, center  
+Example of different leader options (blank, dotted, solid); different alignment options (left, decimal, right, center)  
 ![Stock list](readme/stocks.png)
 
 #### Badly formatted legal document
-Example of bar alignment, custom leader filler text  
+Example of bar alignment, custom leader  
 ![Legal](readme/legal.png)
 
 ## Sample code
