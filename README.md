@@ -1,15 +1,15 @@
 
 ## Overview
 
-**jquery-tabstops** is a jquery plugin to provide Office-style tabstops, with various alignments and leaders
+**jquery-tabstops** is a jquery plugin to provide Office-style tabstops, with various alignments and leaders.
 
-Screenshot:
+Sort of like this:
 
 ![jquery-tabstops](readme/stocks.png)
 
-Blog post:
+There's some more screenshots and sample fiddles below.
 
-[link to that]
+And a blog post here.
 
 ## Quick start
 
