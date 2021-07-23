@@ -52,10 +52,10 @@ Example of bar alignment, custom leader
 
 Some jsfiddle examples of different use cases:
 
-* [Default tab stops](https://jsfiddle.net/knoxg/Lzxpkfea/)
-* [Alignments (left, center, right, decimal, bar)](https://jsfiddle.net/knoxg/Lzxpkfea/)
-* [Leaders (blank, solid, dotted, dashed)](https://jsfiddle.net/knoxg/Lzxpkfea/)
-* [Leader modes (text, border)](https://jsfiddle.net/knoxg/Lzxpkfea/)
+* [Default tab stops](https://jsfiddle.net/knoxg/z8p20cw9/)
+* [Alignments (left, center, right, decimal, bar)](https://jsfiddle.net/knoxg/pm1fub0y/)
+* [Leaders (blank, solid, dotted, dashed)](https://jsfiddle.net/knoxg/cs48pynb/)
+* [Leader modes (text, border)](https://jsfiddle.net/knoxg/bj61m0fr/)
 * [Configure via CSS classes](https://jsfiddle.net/knoxg/Lzxpkfea/) (recommended)
 * [Configure via CSS element styles](https://jsfiddle.net/knoxg/Lzxpkfea/)
 * [Configure via javascript](https://jsfiddle.net/knoxg/Lzxpkfea/)
