@@ -75,11 +75,21 @@
             'leaderMode' : 'text',
             'refreshOnResize' : true
         }
-    }    
-
-
+    }
+    
+    
+    // one resizeObserver for all elements that need to be resized
+    var resizeObserver = new ResizeObserver(function(entries) {
+        for (var i=0; i<entries.length; i++) {
+            var $el = $(entries[i].target);
+            var data = $el.data('tabstops');
+            _refresh($el, data);
+        }
+    });
+    
     function refresh($el, _options) {
         var cssToPixel = function(target, value) {
+            if (typeof value == 'number') { return value; }
             // @TODO if value is already px just return that
             var temp = document.createElement("div");  // create temporary element
             temp.style.overflow = "hidden";  // in case baseline is set too low
@@ -176,9 +186,9 @@
         _refresh($el, data);
         
         if (refreshOnResize) {
-            $el.on('resize', function(e) {
-                _refresh($el, data);
-            });
+            resizeObserver.observe($el[0]);
+        } else {
+            resizeObserver.unobserve($el[0]);
         }
     }
 
