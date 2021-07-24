@@ -37,7 +37,7 @@ jsfiddle: [https://jsfiddle.net/knoxg/d8w6x07b/](https://jsfiddle.net/knoxg/d8w6
 
 
 #### Interesting mandelbrot co-ordinates
-Example of different alignment options (decimal, center, left)
+Example of different alignment options (decimal, center, left)  
 jsfiddle: [https://jsfiddle.net/knoxg/c4wxb9ou/](https://jsfiddle.net/knoxg/c4wxb9ou/)  
 ( co-ordinates courtesy of [marksmath](https://www.marksmath.org/classes/DiscourseArchive/FractalLACFall2016/t/post-a-groovy-image-of-the-mandelbrot-set/73/) )  
 ![Interesting mandelbrot co-ordinates](readme/mandelbrot.png)
