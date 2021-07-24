@@ -1,5 +1,5 @@
 /** tabstop jquery extensions
- * Site: the github site once that exists
+ * Site: https://github.com/randomnoun/jquery-tabstops
  * Author: Greg Knox <knoxg+npm@randomnoun.com>
  *
  * This javascript module exports the following:
