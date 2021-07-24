@@ -1,6 +1,6 @@
 {
   "name": "jquery-tabstops",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A jquery plugin to provide Office-style tabstops, with various alignments and leaders",
   "main": "jquery.tabstops.js",
   "scripts": {
