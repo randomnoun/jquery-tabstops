@@ -32,34 +32,35 @@ Use [CDNjs](https://cdnjs.com/libraries/jquery-tabstops) or [JSdelivr](https://w
 
 ####  Table of contents
 Example of right-alignment, leaders  
+jsfiddle: [https://jsfiddle.net/knoxg/d8w6x07b/](https://jsfiddle.net/knoxg/d8w6x07b/)  
 ![Table of contents](readme/toc.png)
 
 
 #### Interesting mandelbrot co-ordinates
-Example of different alignment options (decimal, center, left)  
+Example of different alignment options (decimal, center, left)
+jsfiddle: [https://jsfiddle.net/knoxg/c4wxb9ou/](https://jsfiddle.net/knoxg/c4wxb9ou/)  
 ( co-ordinates courtesy of [marksmath](https://www.marksmath.org/classes/DiscourseArchive/FractalLACFall2016/t/post-a-groovy-image-of-the-mandelbrot-set/73/) )  
 ![Interesting mandelbrot co-ordinates](readme/mandelbrot.png)
 
-#### Stock list
+#### Badly formatted stock table
 Example of different leader options (blank, dotted, solid); different alignment options (left, decimal, right, center)  
+jsfiddle: [https://jsfiddle.net/knoxg/03fg1ckd/](https://jsfiddle.net/knoxg/03fg1ckd/)  
 ![Stock list](readme/stocks.png)
 
 #### Badly formatted legal document
 Example of bar alignment, custom leader  
+jsfiddle: [https://jsfiddle.net/knoxg/4nbkxw5u/](https://jsfiddle.net/knoxg/4nbkxw5u/)  
 ![Legal](readme/legal.png)
 
 ## Sample code
 
-Some jsfiddle examples of different use cases:
+Some more jsfiddle examples of different use cases:
 
 * [Default tab stops](https://jsfiddle.net/knoxg/z8p20cw9/)
 * [Alignments (left, center, right, decimal, bar)](https://jsfiddle.net/knoxg/pm1fub0y/)
 * [Leaders (blank, solid, dotted, dashed)](https://jsfiddle.net/knoxg/cs48pynb/)
 * [Leader modes (text, border)](https://jsfiddle.net/knoxg/bj61m0fr/)
-* [Configure via CSS classes](https://jsfiddle.net/knoxg/Lzxpkfea/) (recommended)
-* [Configure via CSS element styles](https://jsfiddle.net/knoxg/Lzxpkfea/)
-* [Configure via javascript](https://jsfiddle.net/knoxg/Lzxpkfea/)
-* [Changing options via javascript](https://jsfiddle.net/knoxg/Lzxpkfea/)
+* [Configure via style, data, class, or javascript](https://jsfiddle.net/knoxg/yh61wur7/)
 
 ## Initialisation
 
