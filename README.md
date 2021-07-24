@@ -5,7 +5,7 @@
 
 Sort of like this:
 
-![jquery-tabstops](readme/stocks.png)
+![jquery-tabstops](https://raw.githubusercontent.com/randomnoun/jquery-tabstops/master/readme/stocks.png)
 
 There's some more screenshots and sample fiddles below.
 
@@ -33,24 +33,24 @@ Use [JSdelivr](https://www.jsdelivr.com/package/npm/jquery-tabstops) to get late
 ####  Table of contents
 Example of right-alignment, leaders  
 jsfiddle: [https://jsfiddle.net/knoxg/d8w6x07b/](https://jsfiddle.net/knoxg/d8w6x07b/)  
-![Table of contents](readme/toc.png)
+![Table of contents](https://raw.githubusercontent.com/randomnoun/jquery-tabstops/master/readme/toc.png)
 
 
 #### Interesting mandelbrot co-ordinates
 Example of different alignment options (decimal, center, left)  
 jsfiddle: [https://jsfiddle.net/knoxg/c4wxb9ou/](https://jsfiddle.net/knoxg/c4wxb9ou/)  
 ( co-ordinates courtesy of [marksmath](https://www.marksmath.org/classes/DiscourseArchive/FractalLACFall2016/t/post-a-groovy-image-of-the-mandelbrot-set/73/) )  
-![Interesting mandelbrot co-ordinates](readme/mandelbrot.png)
+![Interesting mandelbrot co-ordinates](https://raw.githubusercontent.com/randomnoun/jquery-tabstops/master/readme/mandelbrot.png)
 
 #### Badly formatted stock table
 Example of different leader options (blank, dotted, solid); different alignment options (left, decimal, right, center)  
 jsfiddle: [https://jsfiddle.net/knoxg/03fg1ckd/](https://jsfiddle.net/knoxg/03fg1ckd/)  
-![Stock list](readme/stocks.png)
+![Stock list](https://raw.githubusercontent.com/randomnoun/jquery-tabstops/master/readme/stocks.png)
 
 #### Badly formatted legal document
 Example of bar alignment, custom leader  
 jsfiddle: [https://jsfiddle.net/knoxg/4nbkxw5u/](https://jsfiddle.net/knoxg/4nbkxw5u/)  
-![Legal](readme/legal.png)
+![Legal](https://raw.githubusercontent.com/randomnoun/jquery-tabstops/master/readme/legal.png)
 
 ## Sample code
 
