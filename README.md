@@ -9,7 +9,7 @@ Sort of like this:
 
 There's some more screenshots and sample fiddles below.
 
-And a blog post here.
+And a [blog post here](http://www.randomnoun.com/wp/2021/07/24/tabstop-me-if-you-think-that-youve-heard-this-one-before/).
 
 ## Quick start
 
