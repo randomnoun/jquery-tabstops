@@ -233,3 +233,7 @@ $('p').tabstops('destroy');
 Add the following libraries to the page:
 * jQuery
 * jquery-tabstops.min.js
+
+## Licensing
+
+jquery-tabstops is licensed under the BSD 2-clause license.
