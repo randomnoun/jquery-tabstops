@@ -132,9 +132,9 @@ Javascript:
 ```html
 <p>Here be the tabstops</p>
 <script>
-    $("p").tabstops(
-        tabstops: '1cm left, 5cm right dotted, 10cm center', // three manual tabstops
-    });
+    $("p").tabstops( {
+        tabstops: '1cm left, 5cm right dotted, 10cm center' // three manual tabstops
+    } );
 </script>
 ```
 
@@ -144,13 +144,13 @@ Individual tabstops can be represented either as strings:
 ```html
 <p>Here be the tabstops</p>
 <script>
-    $("p").tabstops(
+    $("p").tabstops( {
         tabstops: [ 
           '1cm left', 
           '5cm right dotted', 
           '10cm center'
         ]
-    });
+    } );
 </script>
 ```
 
@@ -158,13 +158,13 @@ or objects:
 ```html
 <p>Here be the tabstops</p>
 <script>
-    $("p").tabstops(
+    $("p").tabstops( {
         tabstops: [ 
           { position : '1cm', align: 'left' },
           { position : '5cm', align: 'right', leader: 'dotted' }, 
           { position : '10cm', align: 'center }
         ]
-    });
+    } );
 </script>
 ```
 ## Events
