@@ -130,7 +130,7 @@ Data attributes:
 
 Javascript:
 ```html
-<p data-tabstops="1cm left, 5cm right dotted, 10cm center">Here be the tabstops</p>
+<p>Here be the tabstops</p>
 <script>
     $("p").tabstops(
         tabstops: '1cm left, 5cm right dotted, 10cm center', // three manual tabstops
@@ -142,7 +142,7 @@ When initialising by javascript, tabstops can be supplied using a comma-separate
 
 Individual tabstops can be represented either as strings:
 ```html
-<p data-tabstops="1cm left, 5cm right dotted, 10cm center">Here be the tabstops</p>
+<p>Here be the tabstops</p>
 <script>
     $("p").tabstops(
         tabstops: [ 
@@ -156,7 +156,7 @@ Individual tabstops can be represented either as strings:
 
 or objects:
 ```html
-<p data-tabstops="1cm left, 5cm right dotted, 10cm center">Here be the tabstops</p>
+<p>Here be the tabstops</p>
 <script>
     $("p").tabstops(
         tabstops: [ 
