@@ -1,3 +1,4 @@
+[![npm version](https://img.shields.io/npm/v/jquery-tabstops.svg)](https://www.npmjs.com/package/jquery-tabstops)
 
 ## Overview
 
